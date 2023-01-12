@@ -30,6 +30,7 @@ Route::get('/', function () {
 Route::prefix('/blog')->controller(FrontBlogController::class)->name('blog.')->group(function (){
     Route::get('/', 'index')->name('index');
     Route::get('/{blog:slug}', 'show')->name('show');
+    Route::put('/{blog}', 'update')->name('update');
 });
 
 // Admin Panel

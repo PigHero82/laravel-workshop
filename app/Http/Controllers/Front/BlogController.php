@@ -65,10 +65,11 @@ class BlogController extends Controller
         $dataRequest = array_merge($validator->validate(), [
             'blog_id' => $blog->id
         ]);
-        $blog->update($dataRequest);
+        $data = Comment::create($dataRequest);
 
         $response = [
             'success' => true,
+            'payload' => $data
         ];
 
         return response()->json($response, 200);

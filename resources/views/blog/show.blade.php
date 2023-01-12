@@ -1,7 +1,7 @@
 @extends('layout.front')
 
 @section('title')
-Lorem Ipsum
+{{ $data->title }}
 @endsection
 
 @section('content')
@@ -33,9 +33,10 @@ Lorem Ipsum
           <h3>Comment</h3>
 
           <form method="POST" action="">
-            @csrf
+            @method('PUT')
+
             <input class="form-control mb-3" name="name" placeholder="Your name" />
-            <textarea class="form-control mb-3" placeholder="Your comment" rows="4"></textarea>
+            <textarea class="form-control mb-3" name="description" placeholder="Your comment" rows="4"></textarea>
 
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -43,12 +44,16 @@ Lorem Ipsum
           <hr>
         </section>
 
-        @foreach ($comments as $item)
-          <section>
-            <h4>{{ $item->name }}</h4>
-            <p>{{ $item->description }}</p>
-          </section>
-        @endforeach
+        <section id="comment">
+          @foreach ($comments as $item)
+            <div class="card">
+              <div class="card-body">
+                <h4>{{ $item->name }}</h4>
+                <p>{{ $item->description }}</p>
+              </div>
+            </div>
+          @endforeach
+        </section>
       </div>
     </div>
   </div>
@@ -80,4 +85,33 @@ Lorem Ipsum
     </div>
   </div>
 </section>
+@endsection
+
+@section('javascript-custom')
+<script>
+  $('form').submit(function(e){
+    e.preventDefault()
+    const formData = new FormData(this)
+  
+    $.ajax({
+      url: "{{ route('blog.update', $data->id) }}",
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+        console.log(data.payload)
+
+        $('#comment').prepend(`
+          <div class="card">
+            <div class="card-body">
+              <h4>${data.payload.name}</h4>
+              <p>${data.payload.description}</p>
+            </div>
+          </div>
+        `)
+      }
+    })
+  })
+</script>
 @endsection
