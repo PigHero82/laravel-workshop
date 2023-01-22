@@ -1,0 +1,29 @@
+- Perkenalan (nama, penjelasan riwayat kampus, pekerjaan & spesialis di web)
+- Interaksi (bertanya kemampuan peserta (sejauh mana kemampuan web peserta))
+- Instalasi laravel (versi windows saja, hanya menampilkan webnya saja tanpa melakukan instalasi)
+  -- Tutorial instalasi xampp untuk virtual server
+  -- Tutorial instalasi composer
+  -- Tutorial instalasi laravel
+  -- Tutorial instalasi vendor saja (apabila menggunakan project git)
+- Membuat blade I (tampilan depan)
+  -- Mengolah layout (cukup menggunakan kerangka saja (teks header, body, atau footer dengan background warna))
+  -- Penggunaan extends, yield, content, dll
+  -- Sisanya gunakan kode yang sudah dibuat (dengan anggapan peserta telah memahami dasar html dan bootstrap)
+- Mengolah route I
+  -- Menggunakan Route get tampilan depan
+- Mengolah model & migration 
+  -- Membuat model & migrasi kategori serta menampilkan dokumentasi laravel
+  -- Sisanya gunakan kode yang sudah dibuat
+- Mengolah controller & route
+  -- Membuat controller & route kategori
+  -- Sisanya gunakan kode yang sudah dibuat
+- Mengolah blade II (tampilan admin)
+  -- Gunakan kode yang sudah dibuat serti integrasi dengan model
+  -- Penjelasan text editor & datatable
+- Mengolah route II
+  -- Mengambil data blog untuk tampilan paling depan khusus pada route
+  -- Sisanya gunakan kode yang sudah dibuat
+- Mengolah blade III (tampilan depan)
+  -- Integrasi tampilan dengan model menggunakan kode yang telah dibuat
+- Mengolah blade IV (tampilan depan)
+  -- Mengolah kolom komentar pada single blog
