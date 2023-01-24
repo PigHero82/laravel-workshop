@@ -21,24 +21,28 @@ use App\Models\Blog;
 */
 
 Route::get('/', function () {
-    return view('index', [
-        'data' => Blog::all()->take(3)
-    ]);
+    return view('tes-layout');
 });
 
-// Blog
-Route::prefix('/blog')->controller(FrontBlogController::class)->name('blog.')->group(function (){
-    Route::get('/', 'index')->name('index');
-    Route::get('/{blog:slug}', 'show')->name('show');
-    Route::put('/{blog}', 'update')->name('update');
-});
+// Route::get('/', function () {
+//     return view('index', [
+//         'data' => Blog::all()->take(3)
+//     ]);
+// });
 
-// Admin Panel
-Route::prefix('/admin')->name('admin.')->group(function (){
-    Route::get('/', function () {
-        return redirect()->route('admin.blog.index');
-    })->name('index');
+// // Blog
+// Route::prefix('/blog')->controller(FrontBlogController::class)->name('blog.')->group(function (){
+//     Route::get('/', 'index')->name('index');
+//     Route::get('/{blog:slug}', 'show')->name('show');
+//     Route::put('/{blog}', 'update')->name('update');
+// });
 
-    Route::resource('category', CategoryController::class);
-    Route::resource('blog', BlogController::class);
-});
+// // Admin Panel
+// Route::prefix('/admin')->name('admin.')->group(function (){
+//     Route::get('/', function () {
+//         return redirect()->route('admin.blog.index');
+//     })->name('index');
+
+//     Route::resource('category', CategoryController::class);
+//     Route::resource('blog', BlogController::class);
+// });

@@ -5,25 +5,48 @@
   -- Tutorial instalasi composer
   -- Tutorial instalasi laravel
   -- Tutorial instalasi vendor saja (apabila menggunakan project git)
+
+  -*- Tampilkan semua web sebagai perkenalan
 - Membuat blade I (tampilan depan)
   -- Mengolah layout (cukup menggunakan kerangka saja (teks header, body, atau footer dengan background warna))
   -- Penggunaan extends, yield, content, dll
   -- Sisanya gunakan kode yang sudah dibuat (dengan anggapan peserta telah memahami dasar html dan bootstrap)
+
+  -*- Tampilkan kemudian tambah extends, yield, dan content pada tes-layout.blade.php
+  -*- buat 3 contoh web dengan lorem dengan tes-layout.blade.php
 - Mengolah route I
   -- Menggunakan Route get tampilan depan
+
+  -*- Buat route untuk 3 contoh web
+  -*- Ganti contoh web dengan web yang telah dibuat tanpa penjelasan siktaks laravel blade
+  -*- Penjelasan mengenai sintaks dijelaskan saat Mengolah Blade III
 - Mengolah model & migration 
   -- Membuat model & migrasi kategori serta menampilkan dokumentasi laravel
   -- Sisanya gunakan kode yang sudah dibuat
+
+  -*- Buat contoh model sekaligus migration, kemudian dihapus
+  -*- Tampilkan model & migration yang telah dibuat
 - Mengolah controller & route
   -- Membuat controller & route kategori
   -- Sisanya gunakan kode yang sudah dibuat
+
+  -*- Buat contoh controller serta route get, kemudian dihapus
+  -*- Tampilkan controller & route yang telah dibuat
 - Mengolah blade II (tampilan admin)
-  -- Gunakan kode yang sudah dibuat serti integrasi dengan model
+  -- Gunakan kode yang sudah dibuat serta integrasi dengan model
   -- Penjelasan text editor & datatable
+
+  -*- Tampilkan blade admin yang telah dibuat
+  -*- Jelaskan secara singkat mengenai sintaks laravel pada blade
+  -*- Buka web text editor & datatable serta berikan penjelasannya
 - Mengolah route II
   -- Mengambil data blog untuk tampilan paling depan khusus pada route
   -- Sisanya gunakan kode yang sudah dibuat
+
+  -*- Penjelasan route resource & group
 - Mengolah blade III (tampilan depan)
   -- Integrasi tampilan dengan model menggunakan kode yang telah dibuat
 - Mengolah blade IV (tampilan depan)
   -- Mengolah kolom komentar pada single blog
+
+  -*- Penjelasan pembuatan kolom komentar hingga penggunaan javascript nya
